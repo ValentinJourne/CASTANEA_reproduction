@@ -1,29 +1,10 @@
 #Sys.setenv(JAVA_HOME = '/usr/lib/jvm/jdk1.8.0_251')
+#example use castanea
 
-###########################
 #load packages 
-library(chron)
-library(ggplot2)
-library(cowplot)
-library(hydroGOF)
-library(stringr)
-library(tidyr)
-library(dplyr)
-library(directlabels)
-library(chron)
-library(rJava)
-library(readr)
-library(reshape2)
-library(tibble)
-library(MASS)
-
-#for parallel loop
-library(foreach)
-library(doParallel)
-library(lubridate)
 library(purrr)
-###########################
-
+functions <- list.files("packages_R", full.names = T) %>%
+  map(source)
 
 ############################
 # define user path
